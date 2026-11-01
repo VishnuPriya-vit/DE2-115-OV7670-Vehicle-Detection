@@ -1,0 +1,185 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'cam_pclk'
+Slack : 1.576
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : 8.253
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk25_out'
+Slack : 11.465
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'cam_pclk'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk25_out'
+Slack : 2.747
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : 15.183
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'cam_pclk'
+Slack : 35.481
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : 1.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'cam_pclk'
+Slack : 3.053
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.565
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cam_pclk'
+Slack : 19.484
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk25_int'
+Slack : 19.855
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cam_xclk_out'
+Slack : 35.790
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk25_out'
+Slack : 35.790
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'cam_pclk'
+Slack : 5.212
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 9.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk25_out'
+Slack : 11.843
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'cam_pclk'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk25_out'
+Slack : 2.252
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : 15.553
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'cam_pclk'
+Slack : 35.932
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 1.185
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'cam_pclk'
+Slack : 2.712
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.567
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cam_pclk'
+Slack : 19.561
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk25_int'
+Slack : 19.887
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cam_xclk_out'
+Slack : 35.790
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk25_out'
+Slack : 35.790
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'cam_pclk'
+Slack : 8.340
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk25_out'
+Slack : 13.710
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 13.922
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'cam_pclk'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk25_out'
+Slack : 0.804
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : 17.396
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'cam_pclk'
+Slack : 37.636
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.631
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'cam_pclk'
+Slack : 1.585
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.202
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cam_pclk'
+Slack : 19.158
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk25_int'
+Slack : 19.794
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cam_xclk_out'
+Slack : 36.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk25_out'
+Slack : 36.000
+TNS   : 0.000
+
+------------------------------------------------------------

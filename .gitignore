@@ -1,0 +1,11 @@
+
+# Quartus generated databases
+db/
+incremental_db/
+
+# Local Quartus workspace
+*.qws
+
+# Temporary files
+*.tmp
+*.bak
