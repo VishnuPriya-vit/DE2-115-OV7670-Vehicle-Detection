@@ -66,3 +66,7 @@ Keep the camera and scene fixed while the FPGA learns the empty background after
 ## Scope and limitations
 
 Detection depends on the supplied reference patterns, camera view, lighting, object size, and background. Similar colours or patterns may cause false detections, and unfamiliar views may be missed. The included photographs and simulated scenes are calibration and regression data, not a guarantee of accuracy in every environment. Recompile and test on the actual DE2-115 and camera before demonstrating the project.
+## Project Contributors
+
+- [@VishnuPriya-vit](https://github.com/VishnuPriya-vit) — Project Contributor
+- [@prathasharamanidya](https://github.com/prathasharamanidya) — Project Contributor
