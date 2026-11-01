@@ -1,0 +1,27 @@
+CAMERA WIRING -- RETAIN YOUR EXISTING WORKING CONNECTIONS
+FPGA package pin names below are NOT GPIO contact numbers.
+
+OV7670 pin   top.v signal    FPGA package pin
+D0           CAM_D[0]        AB22
+D1           CAM_D[1]        AC15
+D2           CAM_D[2]        AB21
+D3           CAM_D[3]        Y17
+D4           CAM_D[4]        AC21
+D5           CAM_D[5]        Y16
+D6           CAM_D[6]        AD21
+D7           CAM_D[7]        AE16
+PCLK         CAM_PCLK        AD15
+HS/HREF      CAM_HREF        AE15
+VS/VSYNC     CAM_VSYNC       AC19
+XCLK         CAM_XCLK        AF16
+SCL          CAM_SCL         AD19
+SDA          CAM_SDA         AF15
+RESET        CAM_RESET       AF24
+PWDN         CAM_PWDN        AE21
+3V3          board 3.3-V supply (existing connection)
+GND          board ground (existing connection)
+
+JP5 camera I/O bank must be 3.3 V. Do not connect the camera's 3V3 input to 5 V.
+Do not treat a printed GPIO signal label as a physical power-contact number.
+Switch board power off before changing wires. No rewiring is required for
+this software update. VGA and KEY pin assignments are included in the QSF.

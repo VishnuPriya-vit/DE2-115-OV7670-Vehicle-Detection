@@ -1,0 +1,2 @@
+PASS: fragment joining, gap boundary, distinct objects, transitive joining and diagonal rejection
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_merge.v:18: $finish called at 8000 (1ps)

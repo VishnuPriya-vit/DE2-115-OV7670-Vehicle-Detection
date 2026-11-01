@@ -1,0 +1,12 @@
+ENGINE boxes=000000000000000000000000000 classes=00 costs=3fffffff processing_clocks=1210
+ENGINE boxes=000000000000000000428732055 classes=01 costs=3ffffc00 processing_clocks=6296
+ENGINE boxes=0000000002a077b84fc28732055 classes=09 costs=3ff00000 processing_clocks=8672
+ENGINE boxes=00000000021431c057c28732055 classes=09 costs=3ff00000 processing_clocks=8732
+ENGINE boxes=0000000002b481c057c5087285d classes=09 costs=3ff00000 processing_clocks=8662
+ENGINE boxes=1503bdc27ef09ad873c28732055 classes=2d costs=00000000 processing_clocks=11078
+ENGINE boxes=000000000000000000000000000 classes=00 costs=3fffffff processing_clocks=6296
+ENGINE boxes=000000000000000000000000000 classes=00 costs=3fffffff processing_clocks=3622
+ENGINE boxes=000000000000000000000000000 classes=00 costs=3fffffff processing_clocks=3610
+ENGINE boxes=000000000000000000428732055 classes=01 costs=3ffffc00 processing_clocks=6296
+PASS: integrated learning, photo-descriptor matching, horizontal/vertical objects, movement, three objects, rejection controls, noise, removal, relearn, incomplete frame; max processing clocks=11078
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_engine.v:105: $finish called at 174907400000 (1ps)

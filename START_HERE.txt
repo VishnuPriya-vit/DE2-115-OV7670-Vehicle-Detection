@@ -1,0 +1,34 @@
+V6.2 - previous references PLUS six new front/back camera photographs
+
+Keep V6/V6.1 as a backup. Extract this ZIP into a NEW folder.
+1. Open vehicle_detector.qpf in Quartus Prime Lite.
+2. Processing > Start Compilation. Require successful Fitter and timing.
+3. Program the NEW output_files/vehicle_detector.sof through USB-Blaster.
+4. Fix the camera in place. Keep the table EMPTY for about 6 seconds.
+5. Place each toy and test front, rear and sides. Then test two separated toys.
+6. Remove all toys and check that the boxes disappear. Test non-vehicle objects.
+
+Defaults are already set: TEST_BARS=0, RECOGNITION_BYPASS=0, SHOW_TEXT=1,
+STABILIZE_BOXES=1, FOREGROUND_RUN_FILTER=1. Wiring is unchanged.
+If the camera/background moves: remove toys and hands, hold KEY1 about
+2 seconds, release, wait 1 second, then put the toys back.
+KEY1 saves the EMPTY background; it does not save new vehicle views.
+
+CHANGES FROM V6.1
+- Preserves ALL 53 prior reference photographs and their 212 descriptors,
+  costs and aspect limits. Adds six new photographs / 24 descriptors.
+- Total: 59 photographs, 236 descriptors. New front/rear class mapping added.
+- Existing foreground filtering and stable-box tracking are retained.
+- Camera registers, pins, clocks, RAM pipeline, VGA and SDC are unchanged.
+- No blanket threshold increase; the nearly plain yellow rear view has a
+  stricter limit to retain rejection of uniform yellow test patterns.
+
+This is a tested reference update, not a guarantee of all-angle recognition.
+A similar yellow object may still match. Very small toys, shadows/reflections,
+changed lighting and unknown angles can cause misses or false detections.
+The plain yellow rear is especially ambiguous. Keep toys clearly visible.
+Quartus fit/timing and real FPGA recognition MUST be checked for this version.
+No precompiled .sof is included; this environment does not have Quartus.
+
+SIMULATION: from sim, ModelSim 'do run.do' or 'sh run_iverilog.sh'.
+Require 12 PASS lines and no FAIL. Details: sim/VERIFICATION.txt.

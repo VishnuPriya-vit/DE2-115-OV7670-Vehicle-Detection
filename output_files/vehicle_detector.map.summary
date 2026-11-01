@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Oct 25 13:19:00 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : vehicle_detector
+Top-level Entity Name : top
+Family : Cyclone IV E
+Total logic elements : 15,427
+    Total combinational functions : 14,702
+    Dedicated logic registers : 4,255
+Total registers : 4255
+Total pins : 48
+Total virtual pins : 0
+Total memory bits : 2,290,848
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 0

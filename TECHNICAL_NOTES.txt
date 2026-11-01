@@ -1,0 +1,84 @@
+V6.2 reference extension
+
+All V6.1 hardware behavior below is retained except the reference bank grows
+from 212 to 236 parallel cost counters. Its 8-bit choice index still fits.
+Choosing a match adds 24 clocks per valid candidate (72 for three), with no
+change to category RAM read latency or sampling. No frame RAM is added.
+The wider comparison bank can change fitter usage/timing; recompile Quartus.
+The new six photographs are pages 1/2 van front/rear, 3/4 mixer front/rear,
+5/6 construction rear/front. Class IDs are explicitly mapped for appended
+indices 212..219, 220..227, 228..235 respectively.
+Old descriptors, costs and aspect ranges are preserved exactly. New costs
+are capped at 100 and at least 24 below each reference's uniform-yellow cost.
+New rear-van limit is 38, reflecting its few visible distinguishing features.
+All six are calibration examples, NOT independent recognition validation.
+
+The notes below describe retained V6.1 behavior and its historical baseline:
+
+V6.1 changes and assumptions
+
+Foreground filter
+The vehicle_engine pipeline retains the V6 grayscale and background-colour
+RAM read alignment. raw_hit is the same V6 yellow/background decision.
+The new run qualifier sees only completed, correctly aligned pixel samples.
+It requires three adjacent raw_hit pixels in the same row AND same 8-pixel
+tile. It resets adjacency at row/tile boundaries and on reset, frame start,
+processing, or relearn. PCLK gaps between valid pixels do not reset runs.
+The first qualifying third pixel writes a count increment of three and the
+left coordinate of the first pixel. Further pixels increment by one. Counts
+saturate at 64. This removes isolated speckles without shifting every retained
+left edge by two pixels. A one/two-pixel fragment crossing a tile boundary is
+not credited into its neighbouring tile. That limitation is intentional and
+is modeled in tools/foreground_model.py.
+The gray-only diagnostic mode bypasses this filter, preserving V6 behavior.
+No additional image or line RAM, PLL or clock domain was introduced.
+
+Recognition
+template_classifier uses 236 parallel cost counters and the registered
+reference ROM. Each sample now reads center, left, right sequentially, with
+one READ and one SAMPLE clock per tap. Neighbours are clamped inside the
+candidate box. Two equal categories win; if all three categories differ,
+the center wins. This is categorical majority, not an RGB averaging filter.
+ROM outputs are registered in READ, and cost increments occur after the third
+SAMPLE, using the matching ROM index. All reads retain synchronous RAM latency.
+Per valid candidate, 256 cells take 1,536 clocks instead of 512, adding 1,024
+clocks. Three candidates add 3,072 clocks. Default OV7670 blanking must still
+provide continuous PCLK and enough processing time; overrun suppression remains.
+The testbench processing timeout is 30,000 PCLK clocks. See the execution logs
+for measured fixture times. The full 640x480 camera test checks the real
+525-line synthetic frame timing, not only artificial engine frame boundaries.
+The optional ROBUST_SAMPLING=0 classifier parameter is for diagnosis; changing
+it requires matching reference generation. It is not a recommended user toggle.
+
+Reference data
+The original 53 PDF views (14 mixer, 18 van, 21 construction/crane) are
+retained, plus two new front/rear views per toy = 59 sources / 236 descriptors.
+Descriptors use filtered foreground body extents and three-pixel voting.
+reference/recognition_limits.json preserves the V6 acceptance thresholds.
+The first 212 entries preserve the old limits; 24 new entries are appended.
+The builder requires a solid-yellow rejection margin of at least 24 cost
+units; uniform yellow/neutral/dark controls are tested independently in RTL.
+The 59 photographs remain calibration data, not held-out accuracy evidence.
+Synthetic noise/shift/scale/brightness fixtures use those same photographs.
+They test the intended failure mechanism; they do not establish board accuracy.
+No real negative-object dataset or raw sensor-frame sequence was supplied.
+
+Tracking, CDC, display
+The V6 spatial tracker is unchanged: two matching frame results to confirm,
+2-pixel coordinate deadband, smoothing, two misses tolerated, third miss clears.
+This update does not conceal missed detections by increasing hold time.
+Tracker packets still use the same held-data request/ack mailbox from PCLK
+into CLOCK_50. VGA latches coherent boxes during vertical blanking and holds
+one packet per display frame. Reset/relearn/invalid-frame clearing is unchanged.
+Camera capture, SCCB ROM, framebuffer, VGA logic, pin assignments and SDC are
+unchanged. VGA_CLK remains the divider register, outputs update on its falling
+edge. Display remains live RGB565 colour, expanded 2x2, with green overlays.
+Single-buffer tearing and provisional external I/O timing budgets remain V6
+limitations. The async mailbox bus still needs its physical routing review.
+
+Build verification
+All RTL is Verilog-2001. No wizard IP is required; memories/ROM are inferred.
+Quartus and ModelSim executables are unavailable here; Icarus executes the
+simulation benches and Yosys performs structural checks. You must compile
+this version in Quartus and test it on the board. The prior V6 setup/hold
+slack is not a timing report for V6.2.

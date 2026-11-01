@@ -1,0 +1,2 @@
+PASS: new text ROM matches golden renderer at every 800x525 position; enable/disable and OBJECT CANDIDATE bypass label checked
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_text.v:23: $finish called at 840004000 (1ps)

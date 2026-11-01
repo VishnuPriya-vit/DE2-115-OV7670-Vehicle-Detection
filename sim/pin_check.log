@@ -1,0 +1,1 @@
+PASS: QSF/QPF/SDC and all RTL except classifier and reference tables match V6.1 byte-for-byte. Original 212 descriptors, care bits, limits and aspect ranges retained. Reference rebuild reproduces RTL exactly.

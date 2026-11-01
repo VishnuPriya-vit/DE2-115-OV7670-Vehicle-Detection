@@ -1,0 +1,2 @@
+PASS: two-frame confirmation, one-frame noise rejection, spatial box association, two vehicles, reordered slots, jitter deadband, smoothing, motion, two-frame dropout, removal, relearn clear and reset
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_stabilizer.v:60: $finish called at 16320000 (1ps)

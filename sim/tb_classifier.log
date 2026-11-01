@@ -1,0 +1,2 @@
+PASS: 236 multi-view and quarter-turn descriptors match at changed scales and positions; solid-color controls rejected; all 256 corrupted sample centers recovered by neighbourhood voting
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_classifier.v:110: $finish called at 72138400000 (1ps)

@@ -1,0 +1,37 @@
+V6.2 validation scope
+
+This release preserves all 53 previous calibration photographs and adds the
+six front/back photographs in fpga_front-back.pdf (59 total, 236 descriptors).
+They are training/calibration examples, NOT independent held-out evidence.
+
+Icarus Verilog -g2001 -Wall runs the same 12 module/integration testbenches.
+Logs in this directory give the actual execution results.
+- tb_classifier: 236 descriptors, all three uniform category controls,
+  and corruption of all 256 sample centers with correct neighbours.
+- tb_photos: 115 RGB565 scenes: 53 old views, combined three-toy scene,
+  rotated scene, six brightness variants, 30 noisy old front/rear variants,
+  and 24 new-view scenes (six views at body widths 20,28,40,72 stored pixels).
+  Independent software segmentation/matching predicts exact boxes/classes;
+  explicit class assertions also require the expected toy class.
+- tb_top / tb_top_stable: fake full 640x480 RGB565 camera, two empty frames,
+  moving/separated toys, removal and controls; checks capture, CDC, frame RAM,
+  live colour VGA and overlays, with/without box stabilization.
+- Other benches check SCCB, connected components, region merging, full VGA
+  raster, text, tracker, engine learning/relearning and synthetic shadows/noise.
+- Structural Yosys hierarchy/proc/opt/check: see structural.log.
+- pin_check.log checks unchanged pin/clock/project files and retained RTL,
+  original reference data, thresholds/aspect bounds and reference regeneration.
+
+Full bank has 24 more cost counters and adds 24 selection clocks/candidate.
+Quartus is unavailable in this environment. Run a fresh full compilation:
+check Fitter resource usage, positive setup/hold slack and I/O warnings.
+The earlier V6.1 Quartus result does NOT certify V6.2 fit or timing.
+ModelSim scripts are supplied; execution here uses Icarus, not ModelSim.
+
+These tests do not establish recognition accuracy on the real board. No
+independent real non-vehicle dataset or raw camera-frame sequence was supplied.
+Uniform-colour rejection does not imply rejection of every yellow object.
+The nearly featureless van rear remains a difficult/ambiguous view; keeping
+its threshold strict avoids treating all yellow rectangles as vehicles.
+Final checks: each toy front/back/sides, two separated toys, toy removal,
+empty scene, several non-vehicle objects and the review-day lighting.

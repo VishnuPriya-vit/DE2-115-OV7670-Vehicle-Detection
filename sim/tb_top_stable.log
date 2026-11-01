@@ -1,0 +1,9 @@
+CAMERA boxes=000000000000000000000000000 expected=000000000000000000000000000
+CAMERA boxes=0000000002a077b84fc28732055 expected=0000000002a077b84fc28732055
+CAMERA boxes=00000000021431c057c28732055 expected=00000000021431c057c28732055
+CAMERA boxes=000000000000000000428732055 expected=000000000000000000428732055
+CAMERA boxes=000000000000000000000000000 expected=000000000000000000000000000
+CAMERA boxes=000000000000000000000000000 expected=000000000000000000000000000
+VGA frames=14 green pixels=18248 live colour pixels=3507772
+PASS: full camera timing, two empty frames, template recognition, horizontal/vertical two-box separation, removal, solid-color rejection, reset, 105-bit CDC and VGA/DAC timing
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_top.v:166: $finish called at 238887587000 (1ps)

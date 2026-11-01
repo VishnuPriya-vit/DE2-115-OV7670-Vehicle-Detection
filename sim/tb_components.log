@@ -1,0 +1,10 @@
+CC case 0 completed in 3600 clocks
+CC case 1 completed in 15464 clocks
+CC case 2 completed in 4085 clocks
+CC case 3 completed in 6356 clocks
+CC case 4 completed in 6635 clocks
+CC case 5 completed in 6308 clocks
+CC case 6 completed in 6066 clocks
+CC case 7 completed in 6032 clocks
+PASS: 8 independent component cases, full FIFO capacity, top-three ordering; max cycles=15464
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_components.v:36: $finish called at 2566640000 (1ps)

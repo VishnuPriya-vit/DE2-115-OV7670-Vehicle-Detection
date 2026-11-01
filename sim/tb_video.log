@@ -1,0 +1,2 @@
+PASS: all 307200 active VGA pixels match 2x2 RGB565 mapping and three 4-pixel borders plus pipelined status text
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_video.v:60: $finish called at 32153771000 (1ps)

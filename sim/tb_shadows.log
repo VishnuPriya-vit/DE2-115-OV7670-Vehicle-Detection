@@ -1,0 +1,2 @@
+PASS: neutral full-frame shadows/brightness shifts, warm off-white and sparse and dense unconnected yellow speckles rejected; dim and near-equal-gray yellow candidates remain stable with bypass enabled
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_shadows.v:69: $finish called at 136752200000 (1ps)

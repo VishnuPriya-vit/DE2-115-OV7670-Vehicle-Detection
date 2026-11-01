@@ -1,0 +1,2 @@
+PASS: SCCB 84 ROM writes, address 42, three bytes, START/STOP and released ninth bits
+/workspace/scratch/a692880e43f7/vehicle_recognition_v6_2/sim/tb_sccb.v:42: $finish called at 403530000 (1ps)
